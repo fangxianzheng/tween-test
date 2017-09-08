@@ -116,15 +116,16 @@
     var start = window.performance.now(), during = 1000
 
     var run = function () {
-
         var now = window.performance.now()
         var elapsed = (now - start) / during
         var scrollTop = TWEEN.Easing.Cubic.In(elapsed) * 2500
-        document.body.scrollTop = scrollTop
+        document.querySelector('html').scrollTop = scrollTop
+        console.log(scrollTop)
         if(elapsed < 1) requestAnimationFrame(run)
     }
 
     requestAnimationFrame(run)
+    document.body.scrollTop = 500
     </script>
     </body>
-</html>
+</html>1

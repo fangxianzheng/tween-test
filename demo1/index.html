@@ -118,7 +118,7 @@
     var run = function () {
         start++
         var scrollTop = Tween.Cubic.easeOut(start, 0, 2500, during)
-        document.body.scrollTop = scrollTop
+        document.querySelector('html').scrollTop = scrollTop
         if(start < during) requestAnimationFrame(run)
     }
 
